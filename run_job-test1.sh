@@ -21,6 +21,7 @@ echo COPIED SUCCESSFULLY > /g/data/po67/anonymous_cat/Trained/logs/log3.log
 export PYTHONPATH="${PYTHONPATH}:/g/data/po67/anonymous_cat/lib/python3.9/site-packages/"
 echo EXPORTED_PATH > /g/data/po67/anonymous_cat/Trained/logs/log4.log
 cd $PBS_JOBFS
+cd VCT
 
 ################################################################
 
@@ -30,7 +31,7 @@ cd $PBS_JOBFS
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
 ls > /g/data/po67/anonymous_cat/Trained/logs/log5.log
-python3 main_vqvae.py --dataset cars3d --model vqvae --epochs 200 --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/
+python3 main_vqvae.py --dataset cars3d --model vqvae --epochs 200 --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
 
 #################################################################
 

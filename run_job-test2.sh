@@ -20,6 +20,7 @@ cp -r /g/data/po67/anonymous_cat/Code/VCT $PBS_JOBFS
 export PYTHONPATH="${PYTHONPATH}:/g/data/po67/anonymous_cat/lib/python3.9/site-packages/"
 
 cd $PBS_JOBFS
+cd VCT
 
 ################################################################
 
@@ -29,7 +30,7 @@ cd $PBS_JOBFS
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
 ls > /g/data/po67/anonymous_cat/Trained/logs/
-python3 main_vqvae.py --dataset mpi_real --model vqvae --epochs 200 > /g/data/po67/anonymous_cat/Trained/logs/
+python3 VCT/main_vqvae.py --dataset mpi_real --model vqvae --epochs 200 > /g/data/po67/anonymous_cat/Trained/logs/
 
 #################################################################
 
