@@ -294,7 +294,7 @@ def main(args):
     logging_parser = parser.add_argument_group('Logging Parameters')
     logging_parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                                 help='how many batches to wait before logging training status')
-    logging_parser.add_argument('--results-dir', metavar='RESULTS_DIR', default='./results',
+    logging_parser.add_argument('--results-dir', metavar='RESULTS_DIR', default='trained_vqvae/',
                                 help='results dir')
     logging_parser.add_argument('--save-name', default='',
                                 help='saved folder')
