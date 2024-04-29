@@ -363,7 +363,10 @@ def main(args):
         train_loader = datasets_classes[args.dataset](dataset_train_dir, batch_size = args.batch_size, shuffle=True, transform=dataset_transforms[args.dataset], **dataset_train_args[args.dataset])
         test_loader = datasets_classes[args.dataset](dataset_test_dir, batch_size = args.batch_size, shuffle=False, transform=dataset_transforms[args.dataset], **dataset_test_args[args.dataset])
 
+    print(f'Starting training!!!')
     for epoch in range(start, args.epochs + 1):
+        if epoch % 10: 
+            print(f'Epoch {epoch}')
         train_losses = train(epoch, model, train_loader, optimizer, args.cuda,
                              args.log_interval, save_path, args, writer)
         test_losses = test_net(epoch, model, test_loader, args.cuda, save_path, args, writer)
