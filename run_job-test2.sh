@@ -28,7 +28,7 @@ cd $PBS_JOBFS
 # otherwise it gets lost in $PBS_JOBFS once job is finished
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
-python3 main_vqvae.py --dataset mpi_real --model vqvae --epochs 200 > /g/data/po67/anonymous_cat/Trained/logs
+python3 main_vqvae.py --dataset mpi_real --model vqvae --epochs 200 | tee /g/data/po67/anonymous_cat/Trained/logs/2.log
 
 #################################################################
 
