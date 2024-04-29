@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+
 #PBS -l ncpus=12
 #PBS -l mem=25GB
 #PBS -l jobfs=30GB
@@ -9,7 +9,7 @@
 #PBS -P po67
 #PBS -l storage=/g/data/po67/anonymous_cat
 #PBS -l wd
-  
+
 module load python3/3.9.2
 module load pytorch/1.
 
