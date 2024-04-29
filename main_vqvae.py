@@ -494,6 +494,7 @@ def save_reconstructed_images(data, epoch, outputs, save_path, name):
 def save_checkpoint(model, epoch, save_path):
     os.makedirs(os.path.join(save_path, 'checkpoints'), exist_ok=True)
     checkpoint_path = os.path.join(save_path, 'checkpoints', f'model_{epoch}.pth')
+    print(f'Saving checkpoint at {checkpoint_path}')
     torch.save(model.state_dict(), checkpoint_path)
 
 
