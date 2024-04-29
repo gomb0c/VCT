@@ -7,11 +7,11 @@
 #PBS -l ngpus=1
 #PBS -l walltime=24:00:00
 #PBS -P po67
-#PBS -l storage=gdata/po67/
+#PBS -l storage=gdata/po67
 #PBS -l wd
 
 module load python3/3.9.2
-module load pytorch/1.
+module load pytorch/1.9.0
 
 ###############################################################
 cp -r /g/data/po67/anonymous_cat/Code/VCT $PBS_JOBFS
