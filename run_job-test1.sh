@@ -31,7 +31,7 @@ cd VCT
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
 ls > /g/data/po67/anonymous_cat/Trained/logs/log5.log
-python3 main_vqvae.py --dataset cars3d --model vqvae --epochs 10 --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
+python3 main_vqvae.py --dataset cars3d --model vqvae --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
 
 #################################################################
 

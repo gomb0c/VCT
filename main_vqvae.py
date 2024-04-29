@@ -278,9 +278,9 @@ def main(args):
                                  help='dataset to use: mnist | cifar10 | imagenet | custom')
     training_parser.add_argument('--dataset_dir_name', default='',
                                  help='name of the dir containing the dataset if dataset == custom')
-    training_parser.add_argument('--data-dir', default='g/data/po67/anonymous_cat/Data/',
+    training_parser.add_argument('--data-dir', default='/g/data/po67/anonymous_cat/Data/',
                                  help='directory containing the dataset')
-    training_parser.add_argument('--epochs', type=int, default=20, metavar='N',
+    training_parser.add_argument('--epochs', type=int, default=200, metavar='N',
                                  help='number of epochs to train (default: 10)')
     training_parser.add_argument('--max-epoch-samples', type=int, default=50000,
                                  help='max num of samples per epoch')
@@ -294,7 +294,8 @@ def main(args):
     logging_parser = parser.add_argument_group('Logging Parameters')
     logging_parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                                 help='how many batches to wait before logging training status')
-    logging_parser.add_argument('--results-dir', metavar='RESULTS_DIR', default='trained_vqvae/',
+    logging_parser.add_argument('--results-dir', metavar='RESULTS_DIR', 
+                                default='/g/data/po67/anonymous_cat/Trained/trained_vqvae/',
                                 help='results dir')
     logging_parser.add_argument('--save-name', default='',
                                 help='saved folder')
@@ -363,7 +364,7 @@ def main(args):
         train_loader = datasets_classes[args.dataset](dataset_train_dir, batch_size = args.batch_size, shuffle=True, transform=dataset_transforms[args.dataset], **dataset_train_args[args.dataset])
         test_loader = datasets_classes[args.dataset](dataset_test_dir, batch_size = args.batch_size, shuffle=False, transform=dataset_transforms[args.dataset], **dataset_test_args[args.dataset])
 
-    print(f'Starting training!!!')
+    print(f'Starting training!!!, with {args.epochs} epochs')
     for epoch in range(start, args.epochs + 1):
         if epoch % 10 == 0: 
             print(f'Epoch {epoch}')
