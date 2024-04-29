@@ -365,7 +365,7 @@ def main(args):
 
     print(f'Starting training!!!')
     for epoch in range(start, args.epochs + 1):
-        if epoch % 10: 
+        if epoch % 10 == 0: 
             print(f'Epoch {epoch}')
         train_losses = train(epoch, model, train_loader, optimizer, args.cuda,
                              args.log_interval, save_path, args, writer)
