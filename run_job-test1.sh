@@ -31,10 +31,6 @@ cd VCT
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
 ls > /g/data/po67/anonymous_cat/Trained/logs/log5.log
-python3 main_vqvae.py --dataset cars3d --model vqvae --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
+python3 main_vqvae.py --dataset cars3d --epochs 200 --model vqvae --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
 
 #################################################################
-
-# This part is not necessary, I put it here only because I use tensorboard with logdir "runs/"
-cp -r VCT/trained_vqvae /g/data/po67/anonymous_cat/Trained
-cp -r VCT/tmp /g/data/po67/anonymous_cat/Trained/logs
