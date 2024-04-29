@@ -14,7 +14,7 @@ module load python3/3.9.2
 module load pytorch/1.9.0
 
 ###############################################################
-cp --parents /g/data/po67/anonymous_cat/Data/ $PBS_JOBFS
+cp -r --parents /g/data/po67/anonymous_cat/Data/ $PBS_JOBFS
 cp -r /g/data/po67/anonymous_cat/Code/VCT $PBS_JOBFS
 
 export PYTHONPATH="${PYTHONPATH}:/g/data/po67/anonymous_cat/lib/python3.9/site-packages/"
