@@ -10,14 +10,16 @@
 #PBS -l storage=gdata/po67
 #PBS -l wd
 
+echo BEFORE_LOADING
 module load python3/3.9.2
 module load pytorch/1.9.0
 
+echo LOADED_MODULES
 ###############################################################
 cp -r /g/data/po67/anonymous_cat/Code/VCT $PBS_JOBFS
-
+echo COPIED SUCCESSFULLY
 export PYTHONPATH="${PYTHONPATH}:/g/data/po67/anonymous_cat/lib/python3.9/site-packages/"
-
+echo EXPORTED_PATH
 cd $PBS_JOBFS
 
 ################################################################
