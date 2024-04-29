@@ -7,7 +7,7 @@
 #PBS -l ngpus=1
 #PBS -l walltime=24:00:00
 #PBS -P po67
-#PBS -l storage=g/data/po67/anonymous_cat
+#PBS -l storage=/g/data/po67/anonymous_cat
 #PBS -l wd
   
 module load python3/3.9.2
