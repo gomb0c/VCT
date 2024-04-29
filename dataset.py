@@ -206,7 +206,7 @@ def custum_dataset(
         dset = Dataset_fc
     
     elif name.lower() == 'cars3d':
-        dataset = _load_data(os.path.join(dset_dir, 'cars3d', 'data'))
+        dataset = _load_data(os.path.join(dset_dir, 'data'))
         train_kwargs = {'data_tensor':np.uint8(dataset*255), 'transform':transform, 'eval_flag': True}
         dset = Dataset_fc
     
