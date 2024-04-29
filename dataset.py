@@ -150,7 +150,7 @@ def custum_dataset(
         dset = Dataset_fc
     
     elif name.lower() == 'shapes3d':
-        data = h5py.File(os.path.join(dset_dir,'3dshapes.h5'), 'r')
+        data = h5py.File(os.path.join(dset_dir,'shapes3d', '3dshapes.h5'), 'r')
         train_kwargs = {'data_tensor':data["images"][()],"transform":transform, 'eval_flag': True}
         dset = Dataset_fc
     
@@ -169,7 +169,7 @@ def custum_dataset(
 
 
     elif name.lower() == "mpi_real":
-        data  = np.load(os.path.join(dset_dir,"mpi3d_real.npz"), "r")
+        data  = np.load(os.path.join(dset_dir, 'mpi3d', "mpi3d_real.npz"), "r")
         images = data['images']
         train_kwargs = {'data_tensor':images,'transform':transform, 'eval_flag': True}
         dset = Dataset_fc
@@ -206,7 +206,7 @@ def custum_dataset(
         dset = Dataset_fc
     
     elif name.lower() == 'cars3d':
-        dataset = _load_data(dset_dir.replace("cars3d","cars"))
+        dataset = _load_data(os.path.join(dset_dir, 'cars3d', 'data'))
         train_kwargs = {'data_tensor':np.uint8(dataset*255), 'transform':transform, 'eval_flag': True}
         dset = Dataset_fc
     
@@ -255,7 +255,7 @@ def custum_dataset_clip(
         dset = Dataset_fc
     
     elif name.lower() == 'shapes3d':
-        data = h5py.File(os.path.join(dset_dir,'3dshapes.h5'), 'r')
+        data = h5py.File(os.path.join(dset_dir, 'shapes3d', '3dshapes.h5'), 'r')
         images = data["images"][()]
         data = images
         train_kwargs = {'data_tensor':data,'transform':transform, "clip_transform":clip_transform}

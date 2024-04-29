@@ -278,7 +278,7 @@ def main(args):
                                  help='dataset to use: mnist | cifar10 | imagenet | custom')
     training_parser.add_argument('--dataset_dir_name', default='',
                                  help='name of the dir containing the dataset if dataset == custom')
-    training_parser.add_argument('--data-dir', default='/media/ssd/Datasets',
+    training_parser.add_argument('--data-dir', default='/g/data/po67/anonymous_cat/Data/',
                                  help='directory containing the dataset')
     training_parser.add_argument('--epochs', type=int, default=20, metavar='N',
                                  help='number of epochs to train (default: 10)')
