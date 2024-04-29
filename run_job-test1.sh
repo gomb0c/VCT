@@ -10,16 +10,16 @@
 #PBS -l storage=gdata/po67
 #PBS -l wd
 
-echo BEFORE_LOADING
+echo BEFORE_LOADING > /g/data/po67/anonymous_cat/Trained/logs/log1.log
 module load python3/3.9.2
 module load pytorch/1.9.0
 
-echo LOADED_MODULES
+echo LOADED_MODULES > /g/data/po67/anonymous_cat/Trained/logs/log2.log
 ###############################################################
 cp -r /g/data/po67/anonymous_cat/Code/VCT $PBS_JOBFS
-echo COPIED SUCCESSFULLY
+echo COPIED SUCCESSFULLY > /g/data/po67/anonymous_cat/Trained/logs/log3.log
 export PYTHONPATH="${PYTHONPATH}:/g/data/po67/anonymous_cat/lib/python3.9/site-packages/"
-echo EXPORTED_PATH
+echo EXPORTED_PATH > /g/data/po67/anonymous_cat/Trained/logs/log4.log
 cd $PBS_JOBFS
 
 ################################################################
@@ -29,7 +29,7 @@ cd $PBS_JOBFS
 # otherwise it gets lost in $PBS_JOBFS once job is finished
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
-ls > /g/data/po67/anonymous_cat/Trained/logs/
+ls > /g/data/po67/anonymous_cat/Trained/logs/log5.log
 python3 main_vqvae.py --dataset cars3d --model vqvae --epochs 200 --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/
 
 #################################################################
