@@ -305,7 +305,7 @@ def main(args):
     args = parser.parse_args(args)
     args.cuda = not args.no_cuda and torch.cuda.is_available()
     # args.cuda = False
-    dataset_dir_name = args.dataset if args.dataset not in ['custom','imagenet'] else args.dataset_dir_name
+    dataset_dir_name = args.dataset if args.dataset not in ['custom','imagenet', 'mpi_real'] else args.dataset_dir_name
 
     lr = args.lr or default_hyperparams[args.dataset]['lr']
     k = args.k or default_hyperparams[args.dataset]['k']
