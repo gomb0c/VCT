@@ -31,6 +31,6 @@ cd VCT
 
 # e.g., python3 main.py > /g/data/kf26/$USER/logs
 ls > /g/data/po67/anonymous_cat/Trained/logs/log5.log
-python3 main_vqvae.py --epochs 200 --dataset mpi_real --model vqvae --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job1_output.log
+python3 main_vqvae.py --epochs 200 --dataset mpi_real --model vqvae --data-dir /g/data/po67/anonymous_cat/Data/ > /g/data/po67/anonymous_cat/Trained/logs/job2_output.log
 
 #################################################################
